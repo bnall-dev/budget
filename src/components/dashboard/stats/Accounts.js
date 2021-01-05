@@ -45,22 +45,23 @@ const Accounts = ({ authTransactions }) => {
 
   return (
     <div className="accounts">
+      <h3>Accounts</h3>
       <div className="accountsDiv">
         <div className="accountDiv">
-          <div>Debit</div>
-          <div>${debitBalance()}</div>
+          <h5>Debit</h5>
+          <div>${debitBalance().toFixed(2)}</div>
         </div>
         <div className="accountDiv">
-          <div>Credit</div>
-          <div>${creditBalance()}</div>
+          <h5>Credit</h5>
+          <div>${creditBalance().toFixed(2)}</div>
         </div>
         <div className="accountDiv">
-          <div>Cash</div>
-          <div>${cashBalance()}</div>
+          <h5>Cash</h5>
+          <div>${cashBalance().toFixed(2)}</div>
         </div>
         <div className="accountDiv">
-          <div>Savings</div>
-          <div>${savingsBalance()}</div>
+          <h5>Savings</h5>
+          <div>${savingsBalance().toFixed(2)}</div>
         </div>
       </div>
     </div>

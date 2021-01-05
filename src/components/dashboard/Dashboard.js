@@ -36,9 +36,6 @@ const Dashboard = ({
     <div className="dashboard">
       <Router>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Link className="navLink" to="/stats">
-            Stats
-          </Link>
           <Link className="navLink" to="/ledger">
             Ledger
           </Link>
@@ -47,9 +44,6 @@ const Dashboard = ({
           </Link>
         </div>
         <Switch>
-          <Route exact path="/stats">
-            <Stats authTransactions={authTransactions} />
-          </Route>
           <Route exact path="/ledger">
             <Ledger
               auth={auth}

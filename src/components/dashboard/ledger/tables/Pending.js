@@ -37,6 +37,8 @@ const Pending = ({
     const balanceStyle = { textAlign: 'right' };
     if (pendingBalance > 0) {
       balanceStyle.backgroundColor = 'lightgreen';
+    } else if (pendingBalance > -0.1 && pendingBalance < 0) {
+      balanceStyle.backgroundColor = 'lightgreen';
     } else {
       balanceStyle.backgroundColor = 'red';
     }
@@ -63,7 +65,9 @@ const Pending = ({
             {t.amount.toFixed(2)}
           </td>
           <td className="tableCell" style={balanceStyle}>
-            {Number(Math.round(pendingBalance + 'e2') + 'e-2').toFixed(2)}
+            {(Number(Math.round(pendingBalance + 'e2') + 'e-2') || 0).toFixed(
+              2
+            )}
           </td>
 
           <td className="tableButton">
