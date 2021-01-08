@@ -28,7 +28,6 @@ const Ledger = ({
       <div
         style={{
           margin: 16,
-
           display: 'flex',
           flexDirection: 'row',
         }}
@@ -53,7 +52,10 @@ const Ledger = ({
             setDisplayedTransactions={setDisplayedTransactions}
           />
         </div>
-        <Stats authTransactions={authTransactions} />
+        <Stats
+          authTransactions={authTransactions}
+          displayedTransactions={displayedTransactions}
+        />
       </div>
 
       <Tables
