@@ -52,8 +52,6 @@ const sync = async () => {
 
 
 
-
-
  `;
 
     await client.query(SQL);

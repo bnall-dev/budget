@@ -51,19 +51,22 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar auth={auth} setAuth={setAuth} />
-
-      {!auth && <Login users={users} setAuth={setAuth} />}
-      {auth && (
-        <Dashboard
-          auth={auth}
-          authTransactions={authTransactions}
-          transactions={transactions}
-          setTransactions={setTransactions}
-          userTransactions={userTransactions}
-          setUserTransactions={setUserTransactions}
-        />
-      )}
+    
+        <Navbar auth={auth} setAuth={setAuth} />
+     
+         
+            {!auth && <Login users={users} setAuth={setAuth} />}
+            {auth && (
+              <Dashboard
+                auth={auth}
+                authTransactions={authTransactions}
+                transactions={transactions}
+                setTransactions={setTransactions}
+                userTransactions={userTransactions}
+                setUserTransactions={setUserTransactions}
+              />
+            )}
+          
     </div>
   );
 };

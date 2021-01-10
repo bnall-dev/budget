@@ -186,6 +186,12 @@ const LineGraph = ({ authTransactions, displayedTransactions }) => {
       />
       {yLines}
       <polyline
+        fill="rgba(225,225,265,0.5)"
+        stroke="darkblue"
+        strokeWidth="1"
+        points={activeString}
+      />
+      <polyline
         fill="rgba(265,100,100,0.5)"
         stroke="none"
         points="0,150 365,150 365,170 0,170"
@@ -209,7 +215,7 @@ const LineGraph = ({ authTransactions, displayedTransactions }) => {
         points={savingsString}
       />
       <polyline
-        fill="rgba(225,225,265,0.5)"
+        fill="none"
         stroke="darkblue"
         strokeWidth="1"
         points={activeString}
