@@ -30,6 +30,7 @@ const Login = ({ setAuth, users }) => {
           }}
         />
         <input type="submit" value="Submit" />
+        <p>Try Username "Demo" with Password "demo"!</p>
       </form>
     </div>
   );
